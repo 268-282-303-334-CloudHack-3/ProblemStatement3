@@ -1,0 +1,105 @@
+version: '3.3'  # version of compose format
+
+services:
+
+  landing-service:
+    build: ./landing # path is relative to docker-compose.yml location
+    hostname: landing-service
+    ports:
+      - 5050:5050  # host:container
+    networks:
+      sample:
+        aliases:
+          - landing-service
+
+  addition-service:
+    build: ./addition # path is relative to docker-compose.yml location
+    hostname: addition-service
+    networks:
+      sample:
+        aliases:
+          - addition-service
+
+  division-service:
+    build: ./division # path is relative to docker-compose.yml location
+    hostname: division-service
+    networks:
+      sample:
+        aliases:
+          - division-service
+
+  equal-service:
+    build: ./equal # path is relative to docker-compose.yml location
+    hostname: equal-service
+    networks:
+      sample:
+        aliases:
+          - equal-service
+
+  exponent-service:
+    build: ./exponent # path is relative to docker-compose.yml location
+    hostname: exponent-service
+    networks:
+      sample:
+        aliases:
+          - exponent-service
+
+  gcd-service:
+    build: ./gcd # path is relative to docker-compose.yml location
+    hostname: gcd-service
+    networks:
+      sample:
+        aliases:
+          - gcd-service
+
+  greater_than-service:
+    build: ./greater_than # path is relative to docker-compose.yml location
+    hostname: greater_than-service
+    networks:
+      sample:
+        aliases:
+          - greater_than-service
+
+  lcm-service:
+    build: ./lcm # path is relative to docker-compose.yml location
+    hostname: lcm-service
+    networks:
+      sample:
+        aliases:
+          - lcm-service
+
+  less_than-service:
+    build: ./less_than # path is relative to docker-compose.yml location
+    hostname: less_than-service
+    networks:
+      sample:
+        aliases:
+          - less_than-service
+
+  modulus-service:
+    build: ./modulus # path is relative to docker-compose.yml location
+    hostname: modulus-service
+    networks:
+      sample:
+        aliases:
+          - modulus-service
+
+  multiplication-service:
+    build: ./multiplication # path is relative to docker-compose.yml location
+    hostname: multiplication-service
+    networks:
+      sample:
+        aliases:
+          - multiplication-service
+
+  subtraction-service:
+    build: ./subtraction # path is relative to docker-compose.yml location
+    hostname: subtraction-service
+    networks:
+      sample:
+        aliases:
+          - subtraction-service
+
+networks:
+  sample:
+
